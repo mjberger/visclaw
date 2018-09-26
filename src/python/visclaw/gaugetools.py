@@ -509,7 +509,8 @@ def plot_gauge_locations(plotdata, gaugenos='all', mapc2p=None, \
             if add_labels: 
                 xn = xn + xoffset
                 yn = yn + yoffset
-                text(xn,yn,'  %s' % gauge[0], fontsize=fontsize)
+                #text(xn,yn,'  %s' % gauge[0], fontsize=fontsize)
+                text(xn,yn,'  %s' % gauge[0], fontsize=fontsize,color='w')
         except:
             print("*** plot_gauge_locations: warning: did not find x,y data for gauge ",gauge[0])
 

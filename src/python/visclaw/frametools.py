@@ -1039,7 +1039,7 @@ def printfig(fname='',frameno='', figno='', format='png', plotdir='.', \
         plt.savefig(fname, transparent=True, bbox_inches='tight', \
                       pad_inches=0,dpi=kml_dpi)
     else:
-        plt.savefig(fname)
+        plt.savefig(fname,bbox_inches='tight')
 
 
 #======================================================================

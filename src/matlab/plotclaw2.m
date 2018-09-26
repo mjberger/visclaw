@@ -96,7 +96,7 @@ while Frame <= MaxFrames
   end
 
   if (Frame ~= Frame_old | isempty(amrdata))
-    [amrdata,t] = readamrdata(clawdim,Frame,outputdir,outputflag,...
+[amrdata,t] = readamrdata(clawdim,Frame,outputdir,outputflag,...
 	outputprefix,readblocknumber);
   end;
 

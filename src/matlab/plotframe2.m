@@ -1,4 +1,4 @@
-%
+%user
 % PLOTFRAME2 plots data from a single Clawpack output file.
 %
 %    PLOTFRAME2 is called from PLOTCLAW2, the driver script for Clawpack
@@ -40,7 +40,7 @@ if exist('beforeframe')==2
   % want executed before drawing each frame, for example
   % if you want to use axes to specify exactly where the
   % plot will be in the window, aspect ratio, etc.
-  beforeframe;
+  beforeframe;f
 end
 
 set_value('forestclaw','ForestClaw',0);
