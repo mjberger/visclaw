@@ -48,7 +48,8 @@ while strcmp(inp,'k')
     disp('  q  -- quit')
     inp = 'k';
   elseif strcmp(inp,'k')
-    keyboard
+      commandwindow;
+      keyboard
   elseif strcmp(inp,'r')
     % redraw:  leave Frame counter alone
     if Frame == -frameinc
