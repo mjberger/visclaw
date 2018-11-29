@@ -27,6 +27,7 @@ import sys
 import os
 import time
 import subprocess
+import shutil
 
 import clawpack.visclaw.frametools as frametools
 
@@ -139,6 +140,10 @@ def plotclaw(outdir='.', plotdir='_plots', setplot = 'setplot.py',
             # make index and gauge plots only:
             plotdata._parallel_todo = 'finalize'
             plotpages.plotclaw_driver(plotdata, verbose=False, format=format)
+            if outdir != '.':
+                if os.path.isfile(setplot):
+                    shutil.copy(setplot,os.path.join(outdir,setplot))
+
 
         else:
             # make frame plots only:
@@ -150,6 +155,9 @@ def plotclaw(outdir='.', plotdir='_plots', setplot = 'setplot.py',
         # not in parallel:
         plotdata._parallel_todo = None
         plotpages.plotclaw_driver(plotdata, verbose=False, format=format)
+        if outdir != '.':
+            if os.path.isfile(setplot):
+                shutil.copy(setplot,os.path.join(outdir,setplot))
 
 
 
