@@ -142,7 +142,7 @@ def plotclaw(outdir='.', plotdir='_plots', setplot = 'setplot.py',
             plotpages.plotclaw_driver(plotdata, verbose=False, format=format)
             if outdir != '.':
                 if os.path.isfile(setplot):
-                    shutil.copy(setplot,os.path.join(outdir,setplot))
+                    shutil.copy(setplot,os.path.join(plotdir,setplot))
 
 
         else:
@@ -157,7 +157,7 @@ def plotclaw(outdir='.', plotdir='_plots', setplot = 'setplot.py',
         plotpages.plotclaw_driver(plotdata, verbose=False, format=format)
         if outdir != '.':
             if os.path.isfile(setplot):
-                shutil.copy(setplot,os.path.join(outdir,setplot))
+                shutil.copy(setplot,os.path.join(plotdir,setplot))
 
 
 
